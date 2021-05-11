@@ -16,6 +16,18 @@ body{
 .container{
   padding: 0 20px;
 }
+
+@media (min-width: 640px) {
+  .container {
+    padding: 0 30px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    padding: 0 40px;
+  }
+}
+
 .header{
   background-color: $accent;
 }
@@ -27,8 +39,25 @@ body{
   align-items: center;
 }
 
+
+@media (min-width: 640px) {
+  .header__inner {
+   min-height: 100px;
+  }
+}
+
 .logo__img{
   margin-left: 8px;
+}
+@media (min-width: 640px){
+  .logo__link{
+    margin-left: 14px;
+  }
+}
+@media (min-width: 768px) {
+  .logo__link {
+    margin-left: 0;
+  }
 }
 
 .menu__btn{
