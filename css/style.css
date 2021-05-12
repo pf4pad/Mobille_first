@@ -1,3 +1,35 @@
+@font-face {
+  font-family: 'SFProDisplay-Medium';
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/SFProDisplay-Medium.woff2") format("woff2");
+  src: url("../fonts/SFProDisplay-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'SFProDisplay-Bold';
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/SFProDisplay-Bold.woff2") format("woff2");
+  src: url("../fonts/SFProDisplay-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'SFProDisplay-Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/SFProDisplay-Regular.woff2") format("woff2");
+  src: url("../fonts/SFProDisplay-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'SFProDisplay-Semibold';
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/SFProDisplay-Semibold.woff2") format("woff2");
+  src: url("../fonts/SFProDisplay-Semibold.woff") format("woff");
+}
+
 html {
   box-sizing: border-box;
 }
@@ -9,10 +41,30 @@ html {
 body {
   min-width: 320px;
   overflow-x: hidden;
+  font-family: 'SFProDisplay-Regular', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .container {
   padding: 0 20px;
+  margin: 0 auto;
 }
 
 @media (min-width: 640px) {
@@ -31,6 +83,7 @@ body {
   .container {
     max-width: 1200px;
     padding: 0 40px;
+    margin: 0 auto;
   }
 }
 
@@ -87,4 +140,60 @@ body {
   top: 15px;
   left: 14px;
   box-shadow: 0 4px 0 0 #2B4074, 0 8px 0 0 #2B4074;
+}
+
+.head {
+  background-image: url("../images/header-bg-img.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  min-height: 193px;
+}
+
+.top-slider {
+  background: rgba(33, 33, 33, 0.5);
+}
+
+.top-slider__item {
+  color: #fff;
+  text-align: center;
+}
+
+.top-slider__title {
+  font-family: 'SFProDisplay-Regular';
+  font-size: 28px;
+  line-height: 28px;
+  text-transform: uppercase;
+  padding: 36px 28px;
+  margin: 0 auto;
+}
+
+.top-slider .slick-dots {
+  display: flex;
+  justify-content: center;
+}
+
+.top-slider .slick-dots button {
+  font-size: 0;
+  border: none;
+  padding: 0;
+  background-color: #2B4074;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+.top-slider .slick-dots .slick-active button {
+  background-color: transparent;
+  border: 1px solid #476E4D;
+}
+
+.top-slider .slick-dots button + .top-slider .slick-dots button {
+  margin-left: 10px;
+}
+
+.top-slider .slick-dots.active {
+  display: flex;
+  justify-content: center;
 }

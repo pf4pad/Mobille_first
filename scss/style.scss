@@ -11,10 +11,28 @@ html{
 body{
   min-width: 320px;
   overflow-x: hidden;
+  font-family: 'SFProDisplay-Regular', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  margin: 0;
+}
+ul,li{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 .container{
   padding: 0 20px;
+  margin: 0 auto;
 }
 
 @media (min-width: 640px) {
@@ -31,6 +49,7 @@ body{
   .container {
     max-width: 1200px;
     padding: 0 40px;
+    margin: 0 auto;
   }
 }
 
@@ -89,3 +108,56 @@ body{
               0 8px 0 0 $accent;
 }
 
+.head {
+  background-image: url('../images/header-bg-img.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  min-height: 193px;
+}
+
+.top-slider {
+  background: rgba(33, 33, 33, 0.5);
+}
+
+.top-slider__item {
+  color: #fff;
+  text-align: center;
+}
+
+.top-slider__title {
+  font-family: 'SFProDisplay-Regular';
+  font-size: 28px;
+  line-height: 28px;
+  text-transform: uppercase;
+  padding: 36px 28px;
+  margin: 0 auto;
+}
+
+.top-slider .slick-dots{
+  display: flex;
+  justify-content: center;
+}
+.top-slider .slick-dots button {
+  font-size: 0;
+  border: none;
+  padding: 0;
+  background-color: $accent;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 5px;
+
+}
+.top-slider .slick-dots .slick-active button {
+  background-color: transparent;
+  border: 1px solid #476E4D;
+
+}
+.top-slider .slick-dots button + .top-slider .slick-dots button {
+  margin-left: 10px;
+}
+.top-slider .slick-dots.active {
+  display: flex;
+  justify-content: center;
+}
