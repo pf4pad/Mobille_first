@@ -1,0 +1,81 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  min-width: 320px;
+  overflow-x: hidden;
+  font-family: 'SFProDisplay-Regular', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  padding: 0;
+}
+
+.container {
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding: 0 30px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1200px;
+    padding: 0 40px;
+    margin: 0 auto;
+  }
+}
+
+.title{
+  font-size: 24px;
+  line-height: 28px;
+  @extend %bold-700;
+  position: relative;
+  padding-bottom: 28px;
+
+}
+
+.title::after{
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 8px;
+  background-color: $accent;
+  bottom: 0;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}

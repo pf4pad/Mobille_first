@@ -1,3 +1,19 @@
 $accent: #2B4074;
-$text-color: #4a4a4a;
+$text-color: #ffffff;
 $bg-color: #f9f6e5;
+$grey:#4A4A4A;
+$default :#9b9b9b;
+
+%medium-500{
+font-family: 'SFProDisplay-Medium';
+font-weight: 500;
+}
+%bold-700 {
+ font-family: 'SFProDisplay-Bold';
+  font-weight: 700;
+}
+%semibold{
+ font-family: 'SFProDisplay-Semibold';
+ font-weight: 900;
+}
+
