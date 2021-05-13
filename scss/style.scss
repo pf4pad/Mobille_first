@@ -427,13 +427,13 @@ display: none;
   background-image:url(..//images/Arrow-etc.svg);
   background-repeat: no-repeat;
   background-position: right center;
-  
-  width: 0;
+    width: 0;
   height: 10px;
   transition: all 1s ease-in;
   transform: translateY(50%);
 }
-.servises__item:hover {
+.servises__item:hover,
+ {
   
  
   .servises__item-title{
@@ -444,7 +444,6 @@ display: none;
   margin: 18px 0;
   padding: 25px 20px 5px;
   min-height: 277px;
-  
 }
  
   .servises__item-text {
