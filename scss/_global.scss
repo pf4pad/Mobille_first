@@ -58,6 +58,13 @@ button {
     margin: 0 auto;
   }
 }
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1440px;
+    padding: 0 40px;
+    margin: 0 auto;
+  }
+}
 
 .title{
   font-size: 24px;
@@ -67,6 +74,16 @@ button {
   padding-bottom: 28px;
 
 }
+
+@media (min-width: 640px) {
+  .title {
+    font-size: 48px;
+    line-height: 56x;
+       position: relative;
+    padding-bottom: 28px;
+  }
+}
+
 
 .title::after{
   content: '';

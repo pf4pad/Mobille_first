@@ -387,14 +387,12 @@ margin: 0 auto;
 
 }
 .servises__item:last-child {
-  min-height: 310px;
-  border: 1px solid $bg-color;
+  
   border-bottom: none;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 310px;
-  border-bottom:1px solid $bg-color;
+  
 
 }
 
@@ -413,9 +411,16 @@ margin: 0 auto;
   margin-bottom: 22px;
   text-transform: uppercase;
 }
+.servises__item-inner {
+    transition: all 0.5s;
+}
 .servises__item-text,
 .servises__item-link {
-display: none;
+  opacity: 0;
+  overflow: hidden ;
+  height: 0;
+  transition: all 0.5s;
+
 
 }
 .servises__item-link{
@@ -427,13 +432,12 @@ display: none;
   background-image:url(..//images/Arrow-etc.svg);
   background-repeat: no-repeat;
   background-position: right center;
-    width: 0;
+  width: 0;
   height: 10px;
   transition: all 1s ease-in;
   transform: translateY(50%);
 }
-.servises__item:hover,
- {
+.servises__item:hover{
   
  
   .servises__item-title{
@@ -444,10 +448,13 @@ display: none;
   margin: 18px 0;
   padding: 25px 20px 5px;
   min-height: 277px;
+  transition: all 0.5s;
 }
  
   .servises__item-text {
-  display: block;
+  opacity: 1;
+  overflow: visible;
+  height: auto;
   font-size: 16px;
   line-height: 18px;
   color:$default;
@@ -455,7 +462,9 @@ display: none;
   }
 
   .servises__item-link {
-  display: inline-block;
+  opacity: 1;
+  overflow: visible;
+  height: auto;
   @extend %bold-700;
   font-size: 16px;
   line-height: 19px;
@@ -477,5 +486,304 @@ display: none;
    100% {width: 0;}
    }
  }
+}
+
+@media (min-width: 640px) {
+  .servise {
+    padding: 24px 0 0;
+    
+  }
+  .servise__title {
+    margin-bottom: 20px;
+    padding-bottom: 0;
+  }
+
+  .servise__title::after {
+   display: none;
+  }
+  .servise__descr {
+    font-size: 24px;
+    line-height: 24px;
+    padding-bottom: 38px;
+    margin-bottom: 31px;
+    position: relative;
+    
+  }
+  .servise__descr::after {
+    position: absolute;
+    content: '';
+    width: 100px;
+    height: 8px;
+    background-color: $accent;
+    bottom: 0;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+
+  }
+
+  .servise__text {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .servises__items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -30px;
+  }
+
+  .servises__item {
+    min-height: 310px;
+    border: 1px solid $bg-color;
+     width: 50%;
+    padding: 0 20px;
+  }
+  .servises__item:nth-child(even) {
+    border-left: none;
+  
+  }
+  .servises__item:last-child {
+    
+    border-bottom: 1px solid $bg-color;
+   
+
+  }
+  
+}
+
+@media (min-width: 768px) {
+  .servise {
+    padding: 50px 0 0;
+
+  }
+
+  .servise__title {
+    margin-bottom: 30px;
+  }
+
+  
+
+  .servise__descr {
+  text-align: left;
+  }
+
+  .servise__descr::after {
+    margin-left: 0;
+  
+  }
+
+  .servise__text {
+    margin-bottom: 27px;
+    text-align: left;
+  }
+
+  .servises__items {
+    
+    margin: 0 -40px;
+  }
+
+  .servises__item {
+    min-height: 334px;
+    padding: 0 20px;
+  }
+  .servises__item:hover {
+    .servises__item-inner {
+      padding: 35px 34px 5px;
+      min-height: 288px;
+    }
+  }
+  
+}
+@media (min-width: 1024px) {
+  .servise {
+    padding: 52px 0 0;
+
+  }
+  .servise__title {
+    margin-bottom: 60px;
+  }
+  .servise__descr {
+    padding-bottom: 46px;
+    margin-bottom: 40px;
+  }
+
+  .servise__text {
+    margin-bottom: 32px;
+    max-width: 608px;
+  }
+
+  .servises__items {
+
+    margin: 0;
+  }
+
+  .servises__item {
+    width: 25%;
+    min-height: 277px;
+    padding:0 17px;
+
+  }
+  .servises__item:nth-child(2),
+  .servises__item:nth-child(6) {
+    border-right: none;
+
+  }
+  .servises__item:hover {
+    .servises__item-inner {
+      margin: 10px 0;
+      padding: 20px 9px 5px;
+      min-height: 255px;
+      
+    }
+  }
 
 }
+
+@media (min-width: 1440px) {
+  .container{
+    position: relative;
+  }
+  .servises__inner{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -100px 0 0;
+  }
+  .servise {
+    padding: 0;
+    
+  }
+  .servises__head{
+    min-width: 350px;
+    max-width: 350px;
+    margin-right: 100px;
+
+  }
+  .servise__title {
+    text-align: left;
+    margin: 90px 0 70px;
+  }
+
+  .servise__descr {
+    padding-bottom: 38px;
+    margin-bottom: 35px;
+  }
+
+  .servises__items {
+
+    margin: 0;
+  }
+
+  .servises__item {
+    
+    width: 240px;
+    padding: 0 5px;
+    height: 273px;
+    
+  }
+  
+  .servises__item:hover {
+    padding: 0 5px;
+    .servises__item-inner {
+      margin: 5px 0;
+      padding: 10px 3px 5px;
+      min-height: 255px;
+
+    }
+  }
+
+}
+
+.project {
+  text-align: center;
+  background: linear-gradient(180deg, #2B4074 0%, rgba(43, 64, 116, 0) 100%);
+  padding: 20px 0;
+}
+
+.project__title {
+  color: $text-color;
+  margin-bottom: 40px;
+}
+.title::after .project__title::after  {
+  color: $text-color;
+}
+
+
+.project__item-img {
+  padding: 14px;
+}
+
+.ptoject__item-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 254px;
+  min-height: 227px;
+  background: rgba($bg-color, .83);
+  border-radius: 4px;
+ 
+
+}
+
+.project-item-info,
+.project-item-search {
+  margin: 0 7px;
+  max-width: 30px;
+}
+.project-item-info img,
+.project-item-search img {
+  width: 100%;
+}
+.project-item-link {
+  display: block;
+  padding: 20px 0;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 2px;
+  color: $accent;
+  @extend %bold-700;
+
+}
+.img-1,
+.img-2,
+.img-3,
+.img-4{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  border-radius: 4px;
+  min-height: 250px;
+}
+.img-1 {
+  background-image: url(../images/project/portfolio-1.png);
+  
+  
+}
+.img-2 {
+   background-image: url(../images/project/portfolio-2.png);
+}
+
+.img-3 {
+  background-image: url(../images/project/portfolio-3.png);
+
+}
+
+
+.img-4 {
+   background-image: url(../images/project/portfolio-4.png);
+}
+
+.team {}
+
+.team__inner {}
+
+.team__img {}
+
+.team__content {}
+
+.team__title {}
+
+.team__text {}
+
+.team__btn {}
