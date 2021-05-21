@@ -114,6 +114,7 @@ button {
   line-height: 28px;
   position: relative;
   padding-bottom: 28px;
+  color: #2B4074;
 }
 
 @media (min-width: 640px) {
@@ -508,10 +509,7 @@ button {
 }
 
 .servises__item:last-child {
-  border-bottom: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  border-bottom: 1px solid #f9f6e5;
 }
 
 .servises__item-img {
@@ -776,8 +774,8 @@ button {
   margin-bottom: 40px;
 }
 
-.title::after .project__title::after {
-  color: #ffffff;
+.project__title.title::after {
+  background-color: #ffffff;
 }
 
 .project__item-img {
@@ -839,4 +837,41 @@ button {
 
 .img-4 {
   background-image: url(../images/project/portfolio-4.png);
+}
+
+.team {
+  padding: 40px 0;
+}
+
+.team__inner {
+  text-align: center;
+}
+
+.team__img {
+  max-width: 100%;
+  margin-bottom: 40px;
+}
+
+.team__title {
+  margin-bottom: 23px;
+}
+
+.team__text {
+  font-size: 16px;
+  line-height: 18px;
+  color: #9b9b9b;
+  max-width: 280px;
+  margin-bottom: 95px;
+}
+
+.team__btn {
+  text-transform: uppercase;
+  background-color: #2B4074;
+  color: #f9f6e5;
+  border: none;
+  padding: 16px;
+  max-width: 200px;
+  min-height: 50px;
+  border-radius: 3px;
+  cursor: pointer;
 }

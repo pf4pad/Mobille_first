@@ -72,7 +72,7 @@ button {
   @extend %bold-700;
   position: relative;
   padding-bottom: 28px;
-
+  color: $accent;
 }
 
 @media (min-width: 640px) {
