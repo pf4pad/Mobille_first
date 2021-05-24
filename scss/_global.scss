@@ -74,18 +74,7 @@ button {
   padding-bottom: 28px;
   color: $accent;
 }
-
-@media (min-width: 640px) {
-  .title {
-    font-size: 48px;
-    line-height: 56x;
-       position: relative;
-    padding-bottom: 28px;
-  }
-}
-
-
-.title::after{
+.title::after {
   content: '';
   position: absolute;
   width: 50px;
@@ -96,3 +85,17 @@ button {
   left: 0;
   right: 0;
 }
+
+@media (min-width: 640px) {
+  .title {
+    font-size: 48px;
+    line-height: 56x;
+    position: relative;
+    padding-bottom: 40px;
+  }
+  .title::after {
+    width: 100px;
+  }
+}
+
+
